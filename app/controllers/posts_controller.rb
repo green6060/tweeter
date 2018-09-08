@@ -31,8 +31,9 @@ before_action :set_post, only: [:show, :update, :edit, :destroy]
   def update
     if @post.update(post_params)
       redirect_to (@post.id)
-    else 
+    else
       render :edit
+    end
   end
 
   def destroy

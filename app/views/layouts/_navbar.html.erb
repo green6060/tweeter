@@ -1,0 +1,9 @@
+<div class="ui menu">
+  <%= link_to 'Posts', posts_path, class: 'item' %>
+  <%= link_to 'Profile', bios_path, class: 'item' %>
+  <div class="right menu">
+    <a class="item">Search</a>
+    <a class="item">Help</a>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "item" %>
+  </div>
+</div>
