@@ -14,8 +14,7 @@ before_action :set_post, only: [:show, :update, :edit, :destroy]
   end
 
   def create
-    @post = Post.new(post_params)
-
+    @post = current_user.posts.new(post_params)
     if @post.save
       redirect_to posts_path
     else
