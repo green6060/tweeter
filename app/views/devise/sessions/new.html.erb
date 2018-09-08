@@ -1,19 +1,25 @@
 <div class="ui middle aligned center aligned grid">
-  <div class="column">
+  <div class="column shorten">
 
     <h2 class="ui teal image header">Log in</h2>
 
     <div class="ui large form">
       <div class="ui stacked segment">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="content">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <div class="field">
+          <div class="ui icon input">
+            <i class="user icon"></i>
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
         </div>
 
         <div class="field">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "current-password" %>
+          <div class="ui icon input">
+            <i class="lock icon"></i>
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "current-password" %>
+          </div>
         </div>
       </div>
     </div>
