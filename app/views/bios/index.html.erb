@@ -1,14 +1,16 @@
 <div id="cover_photo" class="row h-15-px">
-  #cover photo div
-  ##profile pic div centered
-  #/cover photo div
+  <div class="col-12">
+    <img class="mt-4 rounded-circle mx-auto d-block" src="http://placehold.it/235x235">
+  </div>
 </div>
+
+
 
 <div id="bio_box" class="row h-100">
   <div id="show_form">
-    <%= @user.first_name %>
-    <%= @user.last_name %>
-    <%= @user.email %>
+    <h3><%= @user.first_name %></h3>
+    <h3><%= @user.last_name %></h3>
+    <h3><%= @user.email %></h3>
     #edit button
   </div>
 </div>

@@ -7,6 +7,23 @@
 }
 /**********************************************************************************************/
 /**********************************************************************************************/
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.mx-auto {
+  margin-right: auto !important;
+}
+
+.mt-4{
+  margin-top: 1.5rem !important;
+}
+
 .h-25 {
   height: 25% !important;
 }
