@@ -10,11 +10,8 @@
           <%= devise_error_messages! %>
 
           <div class="field">
-            <div class="ui icon input">
-              <i class="user icon"></i>
-              <%= f.label :first_name %><br />
-              <%= f.text_field :last_name, required: true %>
-            </div>
+            <%= f.label :first_name %><br />
+            <%= f.text_field :first_name, required: true %>
           </div>
 
           <div class="field">
