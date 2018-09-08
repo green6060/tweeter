@@ -45,6 +45,7 @@ before_action :set_post, only: [:show, :update, :edit, :destroy]
     end
 
     def post_params
-      params.require(:post).permit(:content)
+      params.require(:post).permit(:content, :title, :main_picture, uploads: [])
     end
+
 end
