@@ -1,2 +1,9 @@
-<h1>Comments#index</h1>
-<p>Find me in app/views/comments/index.html.erb</p>
+<h1>Comments For Post</h1>
+<%= link_to 'Add Comment here', new_post_comment_path%>
+<hr />
+<% @comments.each do |comment| %>
+  <hr />
+    <%= comment.message %>
+  <hr />
+<% end %>
+
