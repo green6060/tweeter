@@ -5,22 +5,10 @@
 </div>
 
 <div id="bio_box" class="row h-100">
-  #show_edit form div
-  #/show_edit form div
   <div id="show_form">
-
+    <%= @user.first_name %>
+    <%= @user.last_name %>
+    <%= @user.email %>
+    
   </div>
-  
-  <div id="edit_form">
-    <h2>Edit User Info</h2>
-    <%= form_for @user do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      <br />
-      <%= f.label :balance %>
-      <%= f.text_field :balance %>
-      <br />
-      <%= f.submit %>
-    <% end %>
-  </div>"
 </div>
