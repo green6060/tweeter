@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 before_action :set_post, only: [:show, :update, :edit, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = current_user.posts
   end
 
   def show
@@ -11,7 +11,6 @@ before_action :set_post, only: [:show, :update, :edit, :destroy]
 
   def new
     @post = Post.new
-    render partial: "form"
   end
 
   def create
@@ -25,7 +24,6 @@ before_action :set_post, only: [:show, :update, :edit, :destroy]
   end
 
   def edit
-    render partial: "form"
   end
 
   def update
