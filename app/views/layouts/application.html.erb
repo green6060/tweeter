@@ -11,10 +11,15 @@
     <%= javascript_include_tag 'main' %>
   </head>
 
-  <body>
-    <div class="ui container">
+  <body class="background-color">
+    <div class="ui container white">
       <%= render partial: 'layouts/navbar' %>
       <%= yield %>
     </div>
   </body>
+  <footer>
+    <div class="ui container">
+      <%= render partial: 'layouts/navbar_footer' %>
+    </div>
+  </footer>
 </html>

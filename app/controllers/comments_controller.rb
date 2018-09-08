@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :edit, :destroy]
+  before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_post
   def index
-    @comments = Comment.all
+    @comments = @post.comments.order(created_at: :asc)
   end
 
   def show
@@ -9,37 +10,41 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @comment = Comment.new
-    render partial: 'form'
+    @comment = @post.comments.new
+
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @comment = @post.comments.new(comment_params)
 
     if @comment.save
-      redirect_to post_comments_path(post.id)
+      redirect_to post_comments_path
     else
       render :new
     end
   end
 
   def edit
-    
   end
 
   def update
     if @comment.update(comment_params)
-      redirect_to post_comments_path(post.id)
+      redirect_to post_comments_path
     else
       render :edit
     end
   end
 
   def destroy
-
+    @comment.destroy
+    redirect_to post_comments_path
   end 
 
   private
+  def set_post
+    @post = Post.find(params[:post_id])
+  end
+  
   def set_comment
     @comment = Comment.find(params[:id])
   end

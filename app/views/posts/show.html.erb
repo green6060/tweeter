@@ -1,2 +1,10 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<p> <%= @post.content %> </p>
+
+
+<%= link_to 'See Comments', post_comments_path(@post) %>
+<br/ >
+<%= link_to 'Edit', edit_post_path %>
+<br />
+<%= link_to 'Delete', @post, method: :delete %>
+<br />
+<%= link_to 'Back', root_path %>
