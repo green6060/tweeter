@@ -2,7 +2,14 @@
   <%= link_to 'Posts', posts_path, class: 'item' %>
   <%= link_to 'Profile', bios_path, class: 'item' %>
   <div class="right menu">
-    <a class="item">Search</a>
+    <div class="ui category search item">
+      <div class="ui transparent icon input">
+        <input class="prompt" type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </div>
     <a class="item">Help</a>
     <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "item" %>
   </div>
